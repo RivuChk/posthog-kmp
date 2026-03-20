@@ -384,7 +384,7 @@ private fun getCurrentISOTimestamp(): String {
 
 // Custom serializer for Map<String, Any?>
 @OptIn(ExperimentalSerializationApi::class)
-object MapStringAnySerializer : KSerializer<Map<String, Any?>> {
+private object MapStringAnySerializer : KSerializer<Map<String, Any?>> {
     override val descriptor: SerialDescriptor = buildClassSerialDescriptor("MapStringAny")
 
     private fun Any?.toJsonElement(): JsonElement = when (this) {
